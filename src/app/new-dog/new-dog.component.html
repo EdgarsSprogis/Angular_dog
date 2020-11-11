@@ -1,0 +1,10 @@
+<div>
+    <span *ngIf="!latestDogAdded" 
+            class="red">
+        Šodien jaunu suņu nav
+    </span>
+    <span *ngIf="latestDogAdded" 
+            class="green">
+            {{latestDogAdded}}
+    </span>
+</div>

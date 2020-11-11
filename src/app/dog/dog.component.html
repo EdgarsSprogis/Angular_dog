@@ -1,0 +1,24 @@
+<p>Nikns suns - rej un kož!</p>
+
+<form #dogForm="ngForm" (ngSubmit)="addNewDog()">
+
+    <label>Vārds</label>
+    <input type="text" name="name" [(ngModel)]="dog.name">
+    <button type="submit">Saglabāt</button>
+
+
+</form>
+
+<app-dogname *ngFor="let dog of dogNames;index as i"
+            [name]="dog"
+            (dogDeleted)="deleteDog(i)"
+            (goodDog)="markDogAsGood(i)">
+</app-dogname>
+
+
+
+
+
+
+
+
